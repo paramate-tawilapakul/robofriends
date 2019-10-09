@@ -7,6 +7,7 @@ import './App.css'
 import ErrorBoundry from '../components/ErrorBoundry'
 import { setSearchField, requestRobots } from '../actions'
 import Header from '../components/Header'
+import CounterButton from '../components/CounterButton'
 
 class App extends Component {
   componentDidMount() {
@@ -27,6 +28,7 @@ class App extends Component {
     return (
       <div className="tc">
         <Header />
+        <CounterButton />
         <SearchBox searchChange={onSearchChange} />
         <Scroll>
           {isPending ? (
